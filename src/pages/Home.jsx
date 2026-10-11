@@ -183,23 +183,15 @@ export default function Home() {
             </h2>
 
             <p className="mx-auto mt-7 max-w-4xl text-base leading-8 text-[#44352F] sm:text-lg sm:leading-10 md:text-xl">
-              The <strong className="font-bold text-black">36th Edition</strong> of the{" "}
+              The <strong className="font-bold text-black">2nd Edition</strong> of{" "}
               <strong className="font-bold text-black">
-                World Education Summit
+                Celebrating Education: Embracing the Future
               </strong>{" "}
               is a closed-door, invite-only B2B conclave taking place on{" "}
-              <strong className="font-bold text-black">
-                12th–13th October 2026
-              </strong>{" "}
-              at{" "}
-              <strong className="font-bold text-black">
-                Hyatt Regency Delhi
-              </strong>
-              . Over two high-density days, India's leading education leaders will
-              convene in one curated room for peer-level conversations across
-              Higher Education and School Education.
+              <strong className="font-bold text-black">11th December 2026</strong>.
+              India's leading education leaders will convene in one curated room
+              for peer-level conversations across Higher Education and School Education.
             </p>
-
             <p className="mt-6 text-base font-bold leading-7 text-[#970D32] sm:text-lg md:text-xl">
               No trade show. No open registration. Every seat at the table is earned.
             </p>
@@ -209,7 +201,7 @@ export default function Home() {
                 to="/contact"
                 className="group inline-flex w-full max-w-[420px] items-center justify-center gap-4 rounded-xl bg-[#C51F43] px-6 py-5 text-center text-base font-bold text-white shadow-[0_12px_30px_rgba(165,29,61,0.20)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#A51D3D] hover:shadow-[0_16px_35px_rgba(165,29,61,0.28)] sm:w-auto sm:px-10"
               >
-                Download WES India Brochure
+                nominate educator leader WES India Brochure
                 <ArrowRight
                   size={22}
                   className="transition-transform duration-300 group-hover:translate-x-1"
