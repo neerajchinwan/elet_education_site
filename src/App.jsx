@@ -10,6 +10,10 @@ import Careers from './pages/Careers'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 import Nominate from './pages/Nominate'
+import Awards2026 from './pages/Awards2026'
+import Vote2026 from './pages/Vote2026'
+import VoteResults from './pages/VoteResults'
+import Privacy from './pages/Privacy'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -26,6 +30,10 @@ export default function App() {
     <Route path="/careers" element={<Careers/>}/>
     <Route path="/contact" element={<Contact/>}/>
     <Route path="/nominate" element={<Nominate/>}/>
+    <Route path="/awards-2026" element={<Awards2026/>}/>
+    <Route path="/vote" element={<Vote2026/>}/>
+    <Route path="/vote/results" element={<VoteResults/>}/>
+    <Route path="/privacy" element={<Privacy/>}/>
     <Route path="*" element={<NotFound/>}/>
   </Routes></main><Footer/></>
 }

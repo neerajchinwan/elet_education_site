@@ -18,6 +18,8 @@ import { Link } from 'react-router-dom'
 
 import { siteConfig } from '../data/siteConfig'
 
+import { votingLive } from '../data/voting2026'
+
 import {
 
   Container,
@@ -1279,7 +1281,7 @@ export default function Home() {
               </div>
 
               <Link
-                to="/nominate"
+                to="/awards-2026"
                 className="group inline-flex w-fit shrink-0 items-center justify-center gap-3 rounded-lg bg-[#D9BD83] px-6 py-4 text-sm font-bold text-[#29212A] transition-all duration-300 hover:-translate-y-1 hover:bg-[#E8D4A8] hover:shadow-lg"
               >
                 Nominate a Leader
@@ -1353,7 +1355,7 @@ export default function Home() {
 
                 <div className="mt-8 border-t border-[#EEE5E0] pt-6">
                   <Link
-                    to="/nominate"
+                    to="/awards-2026"
                     className="inline-flex items-center gap-3 rounded-md bg-[#A51D3D] px-5 py-3 text-sm font-semibold !text-white transition-colors duration-300 hover:bg-[#81152F]"
                   >
                     Explore Nominations
@@ -1470,35 +1472,43 @@ export default function Home() {
 
               <span className="eyebrow">Awards &amp; Recognition</span>
 
-              <h3 className="mt-4 font-display text-2xl font-bold">
+              {votingLive ? (
+                <>
+                  <h3 className="mt-4 font-display text-2xl font-bold">
+                    Support a cause that matters.
+                  </h3>
 
-                Support a cause that matters.
+                  <p className="mt-3 text-sm leading-7 text-slatecopy">
+                    Vote in the Celebrating Education 2026 Awards for the schools,
+                    education leaders and CSR changemakers you believe in.
+                  </p>
 
-              </h3>
+                  <Link
+                    to="/vote"
+                    className="nomination-highlight mt-5 inline-flex items-center gap-2 px-5 py-3 text-sm font-bold"
+                  >
+                    Vote now <ArrowRight size={16} />
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <h3 className="mt-4 font-display text-2xl font-bold">
+                    Nominations are open.
+                  </h3>
 
-              <p className="mt-3 text-sm leading-7 text-slatecopy">
+                  <p className="mt-3 text-sm leading-7 text-slatecopy">
+                    Nominate schools, education leaders and CSR changemakers for
+                    the Celebrating Education 2026 Awards.
+                  </p>
 
-                Explore the external voting page for the Creator With a Cause
-
-                category.
-
-              </p>
-
-              <a
-
-                href="https://exhibit.social/voting2026/polls?category=creator-with-a-cause"
-
-                target="_blank"
-
-                rel="noopener noreferrer"
-
-                className="nomination-highlight mt-5 inline-flex items-center gap-2 px-5 py-3 text-sm font-bold"
-
-              >
-
-                View awards voting <ArrowUpRight size={16} />
-
-              </a>
+                  <Link
+                    to="/awards-2026"
+                    className="nomination-highlight mt-5 inline-flex items-center gap-2 px-5 py-3 text-sm font-bold"
+                  >
+                    Nominate now <ArrowRight size={16} />
+                  </Link>
+                </>
+              )}
 
             </div>
 
