@@ -1,155 +1,87 @@
 import {
-
   ArrowRight,
-
   ArrowUpRight,
-
   ShieldCheck,
-
   Sparkles,
-
   Brain,
-
-  Award,
-
+  Award
 } from 'lucide-react'
-
 import { Link } from 'react-router-dom'
-
 import { siteConfig } from '../data/siteConfig'
-
 import { votingLive } from '../data/voting2026'
-
 import {
-
   Container,
-
   PrimaryLink,
-
   Reveal,
-
   SectionHeading,
-
   TextLink,
-
 } from '../components/common'
 
 const focus = [
 
   {
-
     icon: Award,
-
     title: 'Recognising Excellence',
-
     text: 'Honouring outstanding education, principals and schools.',
-
   },
 
   {
-
     icon: Brain,
-
     title: 'Building Confidence',
-
     text: 'Championing emotional intelligence and essential life skills.',
-
   },
 
   {
-
     icon: ShieldCheck,
-
     title: 'Creating Safer Schools',
-
     text: 'Strengthening child safety, personal boundaries and safeguarding.',
-
   },
 
   {
-
     icon: Sparkles,
-
     title: 'Embracing Innovation',
-
     text: 'Exploring AI and technology with a human-centred approach.',
-
   },
 
 ]
 
 const awards = [
-
   'Excellence in Educational Leadership',
-
   'Outstanding Community Engagement & CSR in Education',
-
   'Best Integration of AI in Education',
-
   'Best School in Life Skills & Safety Education',
-
   'Principal of the Year – Confidence & Well-Being Leadership',
-
 ]
 
 const speakers = [
-
   {
-
     name: 'Smita Sharma Dabas',
-
     role: 'Education & Academic Operations Professional',
-
     image: '/images/smita.png',
-
     linkedin: '',
-
     bio: 'An experienced education professional with expertise in English, employee training, strategic planning, Microsoft Office and team management. She holds a Master’s in English, an M.Ed. and a NET qualification in Education, with a focus on teaching English as a second or foreign language.',
-
   },
-
   {
-
     name: 'Dr. Alka Kapur',
-
     role: 'Principal, Modern Public School, Shalimar Bagh',
-
     image: '/images/alka-kapur.png',
-
     linkedin: 'https://www.linkedin.com/in/alka-kapur-off/',
-
     bio: 'With 33 years of leadership at Modern Public School, Dr. Alka Kapur has championed academic excellence, innovation, sustainability and technology-integrated education. Her achievements include more than 100 awards and recognitions for educational leadership.',
-
   },
-
   {
-
     name: 'Sheba Thapar',
-
     role: 'Education Professional & School Leader',
-
     image: '/images/sheba-thapar.png',
-
     linkedin: 'https://www.linkedin.com/in/sheba-thapar-75562339/',
-
     bio: 'A dedicated education professional with 21 years of experience in school leadership, safe learning environments, teacher development, lesson planning and student-centred education. She focuses on continuous improvement and effective communication with students, parents and colleagues.',
-
   },
-
   {
-
     name: 'Monieka Khanna',
-
     role: 'Education Strategist & Business Development Professional',
-
     image: '/images/monieka-khanna.png',
-
     linkedin: 'https://www.linkedin.com/in/monieka-khanna-789678aa/',
-
     bio: 'An experienced strategist in education management, with expertise in school start-ups, educational technology, budgeting, planning, public speaking, market analysis and marketing. Her professional interests also extend to healthcare, hospitality and infrastructure.',
-
   },
-
 ]
 
 /* Two jury members for the 2026 edition */
@@ -213,105 +145,62 @@ const principalSkills = [
 export default function Home() {
 
   return (
-
     <>
-
       {/* 1. HERO SECTION */}
-
-      <section className="relative flex min-h-[620px] flex-col justify-center overflow-hidden bg-[#343B55] pb-8 pt-28 text-white sm:min-h-[700px] sm:pb-24 sm:pt-32 lg:min-h-[790px]">
-
+      {/* <section className="relative flex min-h-[620px] flex-col justify-center overflow-hidden bg-[#343B55] pb-8 pt-28 text-white sm:min-h-[700px] sm:pb-24 sm:pt-32 lg:min-h-[790px]">
         <div className="absolute inset-0">
-
           <img
-
             src="/images/award-stage.jpeg"
-
             alt="Education leaders at an awards and panel event"
-
             className="h-full w-full object-cover opacity-55 saturate-[0.82]"
-
             fetchPriority="high"
-
           />
-
           <div className="absolute inset-0 bg-gradient-to-r from-[#293149]/80 via-[#293149]/60 to-[#6D4357]/25" />
-
           <div className="absolute inset-0 bg-gradient-to-t from-[#293149]/75 via-transparent to-[#293149]/10" />
-
         </div>
 
         <Container className="relative z-10 grid w-full items-center gap-10 py-8 lg:grid-cols-[1.15fr_.85fr]">
-
           <div className="max-w-3xl">
-
             <span className="eyebrow !text-champagne">
-
               Education · Well-being · Future-ready learners
-
             </span>
 
             <h1 className="section-title mt-5 text-4xl leading-tight sm:mt-7 sm:text-5xl md:text-6xl lg:text-[72px] lg:leading-[1.04]">
-
               Celebrating Education:
-
               <br />
-
               <span className="serif-italic text-champagne">
-
                 Embracing the Future.
-
               </span>
-
             </h1>
 
             <p className="mt-5 max-w-2xl text-sm leading-6 text-white/75 sm:mt-7 sm:text-base sm:leading-7 lg:text-lg">
-
              Nominate inspiring principals and education leaders who are empowering students, strengthening schools, and creating lasting impact in their communities.
-
             </p>
 
             <p className="mt-4 text-sm font-semibold leading-6 text-champagne">
-
               2026 — Date to be announced
-
               <span className="mx-2 text-white/35">·</span>
-
               Venue to be announced
-
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-
               <PrimaryLink to="/events/celebrating-education-embracing-the-future-2026">
-
                 Explore the 2026 edition
-
               </PrimaryLink>
-
               <PrimaryLink to="/about" dark>
-
                 Our purpose
-
               </PrimaryLink>
-
             </div>
-
           </div>
 
           <div className="hidden lg:block">
-
             <div className="ml-auto max-w-[300px] border-l border-champagne pl-6">
-
               <p className="font-editorial text-3xl italic leading-snug">
-
                 Education is evolving. What we teach children must evolve with it.
-
               </p>
 
               <p className="mt-5 text-[10px] font-bold uppercase tracking-[.18em] text-champagne">
-
                 The 2026 edition
-
               </p>
 
             </div>
@@ -321,45 +210,123 @@ export default function Home() {
         </Container>
 
         <div className="relative z-10 mt-5 border-t border-white/25 bg-white/[0.04] backdrop-blur-sm sm:absolute sm:bottom-0 sm:left-0 sm:right-0 sm:mt-0">
-
           <Container className="grid grid-cols-2 gap-y-4 py-5 sm:grid-cols-4">
-
             {siteConfig.metrics.map((m) => (
-
               <div
-
                 key={m.label}
-
                 className="min-w-0 border-r border-white/20 px-3 first:pl-0 last:border-0"
-
               >
 
                 <p className="break-words font-display text-xl font-semibold text-white sm:text-2xl">
-
                   {m.value}
-
                 </p>
 
                 <p className="mt-1 text-[9px] uppercase tracking-[.1em] text-white/75 sm:text-[10px] sm:tracking-[.13em]">
-
                   {m.label}
-
                 </p>
-
               </div>
 
             ))}
-
           </Container>
+        </div>
+      </section> */}
 
+      <section className="relative flex min-h-[620px] flex-col justify-center overflow-hidden bg-[#0B0B0E] pb-8 pt-28 text-white sm:min-h-[700px] sm:pb-24 sm:pt-32 lg:min-h-[790px]">
+        {/* Hero Background Image & Dark Red Gradients */}
+        <div className="absolute inset-0">
+          <img
+            src="/images/hero-img.png"
+            alt="Education leaders at an awards and panel event"
+            className="h-full w-full object-cover opacity-70 saturate-[0.85]"
+            fetchPriority="high"
+          />
+          {/* Directional linear gradient creating deep red atmospheric glow */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B0B0E] via-[#160B0F]/80 to-red-950/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0E] via-transparent to-[#0B0B0E]/60" />
         </div>
 
+        <Container className="relative z-10 grid w-full items-center gap-10 py-8 lg:grid-cols-[1.15fr_.85fr]">
+          <div className="max-w-3xl">
+            <span className="eyebrow font-semibold uppercase tracking-wider text-red-500">
+              Education · Well-being · Future-ready learners
+            </span>
+
+            <h1 className="section-title mt-5 text-4xl leading-tight font-bold sm:mt-7 sm:text-5xl md:text-6xl lg:text-[72px] lg:leading-[1.04]">
+              Celebrating Education:
+              <br />
+              <span className="serif-italic text-red-500">
+                Embracing the Future.
+              </span>
+            </h1>
+
+            <p className="mt-5 max-w-2xl text-sm leading-6 text-white/80 sm:mt-7 sm:text-base sm:leading-7 lg:text-lg">
+              Nominate inspiring principals and education leaders who are empowering students, strengthening schools, and creating lasting impact in their communities.
+            </p>
+
+            <p className="mt-4 text-sm font-semibold leading-6 text-red-400">
+              2026 — Date to be announced
+              <span className="mx-2 text-white/35">·</span>
+              Venue to be announced
+            </p>
+
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              {/* Primary CTA button with red theme */}
+              <PrimaryLink
+                to="/events/celebrating-education-embracing-the-future-2026"
+                className="bg-red-600 hover:bg-red-700 text-white font-medium px-6 py-3 rounded-md transition-colors"
+              >
+                Explore the 2026 edition
+              </PrimaryLink>
+
+              {/* Secondary outline button */}
+              <PrimaryLink
+                to="/about"
+                dark
+                className="border border-white/20 hover:border-red-500 text-white px-6 py-3 rounded-md transition-colors"
+              >
+                Our purpose
+              </PrimaryLink>
+            </div>
+          </div>
+
+          {/* Right Quote Section */}
+          <div className="hidden lg:block">
+            <div className="ml-auto max-w-[300px] border-l-2 border-red-600 pl-6">
+              <p className="font-editorial text-3xl italic leading-snug text-white/95">
+                Education is evolving. What we teach children must evolve with it.
+              </p>
+
+              <p className="mt-5 text-[10px] font-bold uppercase tracking-[.18em] text-red-500">
+                The 2026 edition
+              </p>
+            </div>
+          </div>
+        </Container>
+
+        {/* Metrics Strip */}
+        <div className="relative z-10 mt-5 border-t border-red-900/30 bg-black/50 backdrop-blur-md sm:absolute sm:bottom-0 sm:left-0 sm:right-0 sm:mt-0">
+          <Container className="grid grid-cols-2 gap-y-4 py-5 sm:grid-cols-4">
+            {siteConfig.metrics.map((m) => (
+              <div
+                key={m.label}
+                className="min-w-0 border-r border-white/10 px-3 first:pl-0 last:border-0"
+              >
+                <p className="break-words font-display text-xl font-bold text-white sm:text-2xl">
+                  {m.value}
+                </p>
+
+                <p className="mt-1 text-[9px] uppercase tracking-[.1em] text-white/70 sm:text-[10px] sm:tracking-[.13em]">
+                  {m.label}
+                </p>
+              </div>
+            ))}
+          </Container>
+        </div>
       </section>
 
       {/* 2. ABOUT THE SUMMIT */}
 
       <section className="relative overflow-hidden border-t-[3px] border-[#650B2B] bg-gradient-to-b from-[#FFFBF7] to-[#F8F0E8] px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
-
         <div className="pointer-events-none absolute -right-16 -top-20 h-40 w-80 rotate-[-25deg] rounded-full border-[5px] border-[#D9A36C]/50" />
 
         <Container>
@@ -367,43 +334,27 @@ export default function Home() {
           <div className="relative mx-auto max-w-5xl text-center">
 
             <span className="inline-flex rounded-full border border-[#E8AAB5] bg-[#F8E5E9] px-5 py-3 text-xs font-bold uppercase tracking-[0.24em] text-[#C51F43] sm:text-sm">
-
               About the Summit
-
             </span>
 
             <h2 className="mt-7 text-3xl font-extrabold leading-tight tracking-tight text-[#201914] sm:text-4xl md:text-5xl lg:text-[54px]">
-
               Where India's Education Leaders
-
               <span className="mt-1 block text-[#C51F43]">
-
                 Meet the World
-
               </span>
-
             </h2>
 
             <p className="mx-auto mt-7 max-w-4xl text-base leading-8 text-[#44352F] sm:text-lg sm:leading-10 md:text-xl">
-
               The <strong className="font-bold text-black">2nd Edition</strong>{' '}
-
               of{' '}
-
               <strong className="font-bold text-black">
-
                 Celebrating Education: Embracing the Future
-
               </strong>{' '}
 
               is a closed-door, invite-only B2B conclave taking place on{' '}
-
               <strong className="font-bold text-black">
-
                 11th December 2026
-
               </strong>
-
               . India's leading education leaders will convene in one curated
 
               room for peer-level conversations across Higher Education and
@@ -1050,90 +1001,90 @@ export default function Home() {
 
       {/* 9. SPONSOR */}
 
-<section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
-  <Container>
-    <div className="overflow-hidden rounded-3xl bg-[#24151D] shadow-xl">
-      <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
+      <section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+        <Container>
+          <div className="overflow-hidden rounded-3xl bg-[#24151D] shadow-xl">
+            <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
 
-        {/* Sponsor image panel */}
-        <div className="relative flex min-h-[300px] flex-col items-center justify-center overflow-hidden bg-[#A51D3D] p-6 sm:min-h-[380px] sm:p-10 lg:p-12">
-          {/* Decorative elements */}
-          <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full border border-white/15" />
-          <div className="pointer-events-none absolute -right-8 -top-12 h-48 w-48 rounded-full border border-white/15" />
-          <div className="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-black/10" />
+              {/* Sponsor image panel */}
+              <div className="relative flex min-h-[300px] flex-col items-center justify-center overflow-hidden bg-[#A51D3D] p-6 sm:min-h-[380px] sm:p-10 lg:p-12">
+                {/* Decorative elements */}
+                <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full border border-white/15" />
+                <div className="pointer-events-none absolute -right-8 -top-12 h-48 w-48 rounded-full border border-white/15" />
+                <div className="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-black/10" />
 
-          <div className="relative z-10 w-full max-w-md text-center">
-            <span className="inline-flex rounded-full border border-white/30 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/90 sm:text-xs">
-              Official Event Sponsor
-            </span>
+                <div className="relative z-10 w-full max-w-md text-center">
+                  <span className="inline-flex rounded-full border border-white/30 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/90 sm:text-xs">
+                    Official Event Sponsor
+                  </span>
 
-            {/* Actual sponsor image */}
-            <div className="mt-7 flex min-h-[190px] items-center justify-center overflow-hidden rounded-2xl border border-white/20 bg-white p-5 shadow-lg sm:min-h-[240px] sm:p-8">
-              <img
-                src="/images/viplav.png"
-                alt="AI Business Challenge (ABC) sponsor logo"
-                className="max-h-56 w-full object-contain sm:max-h-64"
-                loading="lazy"
-              />
+                  {/* Actual sponsor image */}
+                  <div className="mt-7 flex min-h-[190px] items-center justify-center overflow-hidden rounded-2xl border border-white/20 bg-white p-5 shadow-lg sm:min-h-[240px] sm:p-8">
+                    <img
+                      src="/images/viplav.png"
+                      alt="AI Business Challenge (ABC) sponsor logo"
+                      className="max-h-56 w-full object-contain sm:max-h-64"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <p className="mt-5 text-sm leading-6 text-white/85">
+                    Empowering the next generation of AI entrepreneurs
+                  </p>
+                </div>
+              </div>
+
+              {/* Sponsor details */}
+              <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-14 xl:p-16">
+                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D5B77A]">
+                  Our Sponsor
+                </span>
+
+                <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
+                  Ai Business Challenge
+                  <span className="mt-1 block text-[#D5B77A]">(ABC)</span>
+                </h2>
+
+                <p className="mt-6 text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
+                  Viplav Panghal and Gaurav Rawat are the founders of Ai Business
+                  Challenge (ABC), an AI community built for students and freelancers
+                  who want to start their own AI business and enter the world of
+                  digital marketing.
+                </p>
+
+                {/* Community statistics */}
+                <div className="mt-8 grid grid-cols-2 gap-4 border-t border-white/15 pt-7 sm:gap-8">
+                  <div>
+                    <p className="font-display text-3xl font-semibold text-white sm:text-4xl">
+                      30,000
+                    </p>
+                    <p className="mt-2 text-xs leading-5 text-white/60 sm:text-sm">
+                      Community members
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="font-display text-3xl font-semibold text-white sm:text-4xl">
+                      102
+                    </p>
+                    <p className="mt-2 text-xs leading-5 text-white/60 sm:text-sm">
+                      Countries represented
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-8 flex items-center gap-3">
+                  <span className="h-px w-10 bg-[#D5B77A]" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#D5B77A]">
+                    Innovation · Entrepreneurship · AI
+                  </p>
+                </div>
+              </div>
+
             </div>
-
-            <p className="mt-5 text-sm leading-6 text-white/85">
-              Empowering the next generation of AI entrepreneurs
-            </p>
           </div>
-        </div>
-
-        {/* Sponsor details */}
-        <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-14 xl:p-16">
-          <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D5B77A]">
-            Our Sponsor
-          </span>
-
-          <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
-            Ai Business Challenge
-            <span className="mt-1 block text-[#D5B77A]">(ABC)</span>
-          </h2>
-
-          <p className="mt-6 text-sm leading-7 text-white/75 sm:text-base sm:leading-8">
-            Viplav Panghal and Gaurav Rawat are the founders of Ai Business
-            Challenge (ABC), an AI community built for students and freelancers
-            who want to start their own AI business and enter the world of
-            digital marketing.
-          </p>
-
-          {/* Community statistics */}
-          <div className="mt-8 grid grid-cols-2 gap-4 border-t border-white/15 pt-7 sm:gap-8">
-            <div>
-              <p className="font-display text-3xl font-semibold text-white sm:text-4xl">
-                30,000
-              </p>
-              <p className="mt-2 text-xs leading-5 text-white/60 sm:text-sm">
-                Community members
-              </p>
-            </div>
-
-            <div>
-              <p className="font-display text-3xl font-semibold text-white sm:text-4xl">
-                102
-              </p>
-              <p className="mt-2 text-xs leading-5 text-white/60 sm:text-sm">
-                Countries represented
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-8 flex items-center gap-3">
-            <span className="h-px w-10 bg-[#D5B77A]" />
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#D5B77A]">
-              Innovation · Entrepreneurship · AI
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </Container>
-</section>
+        </Container>
+      </section>
       {/* 10. DISTINGUISHED SPEAKERS */}
 
 
@@ -1520,77 +1471,77 @@ export default function Home() {
 
       {/* 14. FINAL CALL TO ACTION */}
 
-{/* 10. CONTACT CTA */}
-<section className="bg-[#FCF8F5] px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
-  <Container>
-    <div className="relative overflow-hidden rounded-3xl bg-[#A51D3D]">
-      {/* Decorative background elements */}
-      <div className="pointer-events-none absolute -right-20 -top-28 h-80 w-80 rounded-full border border-white/10" />
-      <div className="pointer-events-none absolute -right-8 -top-16 h-56 w-56 rounded-full border border-white/10" />
-      <div className="pointer-events-none absolute -bottom-32 left-[35%] h-72 w-72 rounded-full bg-black/10 blur-2xl" />
+      {/* 10. CONTACT CTA */}
+      <section className="bg-[#FCF8F5] px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
+        <Container>
+          <div className="relative overflow-hidden rounded-3xl bg-[#A51D3D]">
+            {/* Decorative background elements */}
+            <div className="pointer-events-none absolute -right-20 -top-28 h-80 w-80 rounded-full border border-white/10" />
+            <div className="pointer-events-none absolute -right-8 -top-16 h-56 w-56 rounded-full border border-white/10" />
+            <div className="pointer-events-none absolute -bottom-32 left-[35%] h-72 w-72 rounded-full bg-black/10 blur-2xl" />
 
-      <div className="relative z-10 grid gap-10 p-7 sm:p-10 md:grid-cols-[1fr_auto] md:items-center md:gap-8 lg:p-14 xl:p-16">
-        {/* CTA content */}
-        <div className="max-w-2xl">
-          <div className="flex items-center gap-3">
-            <span className="h-px w-8 bg-[#D5B77A]" />
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E8D4A8]">
-              Be part of the 2026 conversation
-            </span>
+            <div className="relative z-10 grid gap-10 p-7 sm:p-10 md:grid-cols-[1fr_auto] md:items-center md:gap-8 lg:p-14 xl:p-16">
+              {/* CTA content */}
+              <div className="max-w-2xl">
+                <div className="flex items-center gap-3">
+                  <span className="h-px w-8 bg-[#D5B77A]" />
+                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E8D4A8]">
+                    Be part of the 2026 conversation
+                  </span>
+                </div>
+
+                <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
+                  Help shape the
+                  <span className="block text-[#E8D4A8]">
+                    future of education.
+                  </span>
+                </h2>
+
+                <p className="mt-5 max-w-xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
+                  Connect with us to explore opportunities for schools, educators,
+                  award nominations, panel speakers, CSR partners and sponsors.
+                </p>
+
+                {/* Audience labels */}
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {[
+                    'Schools & Educators',
+                    'Award Nominations',
+                    'Panel Speakers',
+                    'CSR Partners',
+                    'Sponsors',
+                  ].map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border border-white/20 bg-white/5 px-3 py-2 text-xs font-medium text-white/90"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* CTA button */}
+              <div className="flex flex-col items-start gap-4 md:items-center">
+                <PrimaryLink
+                  to="/contact"
+                  className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full !bg-white px-7 py-3.5 !text-[#A51D3D] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:!bg-[#F5E8D1] hover:shadow-xl"
+                >
+                  Contact the team
+
+                </PrimaryLink>
+
+                <p className="text-xs text-white/65">
+                  Let’s create meaningful impact together.
+                </p>
+              </div>
+            </div>
+
+            {/* Gold bottom accent */}
+            <div className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-transparent via-[#D5B77A] to-transparent" />
           </div>
-
-          <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
-            Help shape the
-            <span className="block text-[#E8D4A8]">
-              future of education.
-            </span>
-          </h2>
-
-          <p className="mt-5 max-w-xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
-            Connect with us to explore opportunities for schools, educators,
-            award nominations, panel speakers, CSR partners and sponsors.
-          </p>
-
-          {/* Audience labels */}
-          <div className="mt-6 flex flex-wrap gap-2">
-            {[
-              'Schools & Educators',
-              'Award Nominations',
-              'Panel Speakers',
-              'CSR Partners',
-              'Sponsors',
-            ].map((item) => (
-              <span
-                key={item}
-                className="rounded-full border border-white/20 bg-white/5 px-3 py-2 text-xs font-medium text-white/90"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA button */}
-        <div className="flex flex-col items-start gap-4 md:items-center">
-          <PrimaryLink
-            to="/contact"
-            className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full !bg-white px-7 py-3.5 !text-[#A51D3D] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:!bg-[#F5E8D1] hover:shadow-xl"
-          >
-            Contact the team
-           
-          </PrimaryLink>
-
-          <p className="text-xs text-white/65">
-            Let’s create meaningful impact together.
-          </p>
-        </div>
-      </div>
-
-      {/* Gold bottom accent */}
-      <div className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-transparent via-[#D5B77A] to-transparent" />
-    </div>
-  </Container>
-</section>
+        </Container>
+      </section>
 
     </>
 
