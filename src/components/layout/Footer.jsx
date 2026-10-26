@@ -1,0 +1,12 @@
+
+import { ArrowUpRight, Mail, Phone, MapPin } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { siteConfig } from '../../data/siteConfig'
+import { votingLive } from '../../data/voting2026'
+export default function Footer() {
+ return <footer className="bg-ink text-white"><div className="container-wide grid gap-10 py-14 md:grid-cols-[1.2fr_.8fr_1fr] md:py-16">
+  <div><Link to="/" className="inline-flex items-center gap-3"><span className="flex h-9 w-9 items-center justify-center border border-champagne/80 font-display text-sm font-bold text-champagne">CE</span><span className="font-display text-[12px] font-extrabold tracking-[.12em]">CELEBRATING EDUCATION</span></Link><p className="mt-5 max-w-sm text-sm leading-6 text-white/55">Recognising the educators, schools and changemakers building confident, safe, emotionally resilient and future-ready learners.</p></div>
+  <div><p className="text-xs font-bold uppercase tracking-[.15em] text-white">Explore</p><div className="mt-5 flex flex-col gap-3 text-sm text-white/55">{[['Home','/'],['About the initiative','/about'],['2026 edition','/events'],['Nominate for 2026 Awards','/awards-2026'],...(votingLive?[['Vote 2026','/vote']]:[]),['Participate','/careers'],['Contact','/contact']].map(([n,t])=><Link key={t} to={t} className="w-fit hover:text-white">{n}</Link>)}</div></div>
+  <div><p className="text-xs font-bold uppercase tracking-[.15em] text-white">Contact</p><div className="mt-5 flex flex-col gap-4 text-sm text-white/55"><a href="tel:8587899665" className="flex gap-3 hover:text-white"><Phone size={15} className="text-champagne"/>8587899665</a><a href="mailto:lifeskillindia1@gmail.com" className="flex gap-3 hover:text-white"><Mail size={15} className="text-champagne"/>lifeskillindia1@gmail.com</a><a href="mailto:support@lamppostrust.org" className="flex gap-3 hover:text-white"><Mail size={15} className="text-champagne"/>support@lamppostrust.org</a><span className="flex gap-3"><MapPin size={15} className="text-champagne"/>New Delhi, India</span></div></div>
+ </div><div className="border-t border-white/10"><div className="container-wide flex flex-col gap-2 py-5 text-xs text-white/40 sm:flex-row sm:justify-between"><p>© {new Date().getFullYear()} Celebrating Education: Embracing the Future.</p><p className="flex flex-wrap gap-x-4 gap-y-1"><Link to="/privacy" className="hover:text-white">Privacy Policy</Link><span>2026 event details are subject to official confirmation.</span></p></div></div></footer>
+}
