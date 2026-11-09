@@ -353,7 +353,7 @@ export default function Home() {
 
               is a closed-door, invite-only B2B conclave taking place on{' '}
               <strong className="font-bold text-black">
-                11th December 2026
+                18th December 2026
               </strong>
               . India's leading education leaders will convene in one curated
 
@@ -405,7 +405,7 @@ export default function Home() {
           <div className="relative mx-auto max-w-2xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#E8AAB5] bg-[#F8E5E9] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#A51D3D] sm:text-xs">
               <Award size={15} />
-              The Jury · 2026
+              The Jury · 2025
             </span>
 
             <h2 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-[#201914] sm:text-4xl lg:text-5xl">
