@@ -74,10 +74,10 @@ export default function Contact() {
                       </p>
 
                       <a
-                        href="mailto:lifeskillindia1@gmail.com"
+                        href="mailto:programs@lifeskillsjournal.in"
                         className="mt-2 block break-all text-sm transition hover:text-champagne"
                       >
-                        lifeskillindia1@gmail.com
+                        programs@lifeskillsjournal.in
                       </a>
 
                       <a
